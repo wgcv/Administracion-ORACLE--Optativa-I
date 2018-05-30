@@ -15,14 +15,20 @@ Create pfile from spfile;
 "Genera un pfile desde un spfile"
 
 ### Como cambiar parametros de la base de datos
-ALTER SYSTEM SET parameter_name = parameter_value [COMMENT 'text'] [SCOPE = MEMORY  |  SPFILE  |  BOTH]
+ALTER SYSTEM SET parameter_name = parameter_value [COMMENT = 'text'] [SCOPE = MEMORY  |  SPFILE  |  BOTH]
 
 EJ:
 
-ALTER SYSTEM SET open_cursors=600 SCOPE = SPFILE
+ALTER SYSTEM SET open_cursors=600 SCOPE = SPFILE;
+ALTER SYSTEM SET processes=300 COMMENT='29/05/2018 Antes tenia 150' SCOPE = SPFILE;
 
 ### Otra forma de consultar parametros
 SELECT * FROM V$PARAMETER;
 "Los parametros en vivos de la base"
+
 SELECT * FROM V$SPPARAMETER;
 "Los parametros en el archivo spfile"
+
+SELECT * FROM V$PARAMETER where NAME='processes'; 
+"Un parametro específico"
+
