@@ -1,3 +1,6 @@
+# Administracion-ORACLE--Optativa-I
+Clases de administracion SQL ORACLE
+
 sqlplus sysAdmincidt18 as sysdba
 
 show user
