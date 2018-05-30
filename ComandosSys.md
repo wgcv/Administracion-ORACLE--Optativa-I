@@ -32,3 +32,6 @@ SELECT * FROM V$SPPARAMETER;
 SELECT * FROM V$PARAMETER where NAME='processes'; 
 "Un parametro específico"
 
+shutdown immediate
+"Baja la base de datos siguiendo los 3 pasos"
+
