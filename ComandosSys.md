@@ -35,3 +35,15 @@ SELECT * FROM V$PARAMETER where NAME='processes';
 shutdown immediate
 "Baja la base de datos siguiendo los 3 pasos"
 
+STARTUP 
+"Arranca la base de datos"
+
+STARTUP [FORCE] [RESTRICT] [PFILE=filename]
+[OPEN [RECOVER][database]]
+| [NOMOUNT]
+| [MOUNT]
+
+ALTER DATABASE {MOUNT | OPEN }
+ALTER DATABASE {OPEN READ WRITE | READ ONLY}
+
+STARTUP PFILE=$ORACLE_HOME/dbs/initdb01.ora
