@@ -47,3 +47,13 @@ ALTER DATABASE {MOUNT | OPEN }
 ALTER DATABASE {OPEN READ WRITE | READ ONLY}
 
 STARTUP PFILE=$ORACLE_HOME/dbs/initdb01.ora
+
+
+## Ver los segmentos
+SELECT * FROM DBA_SEGMENTS;
+
+## Ver los usuarios 
+SELECT * from Dba_Users;
+
+### Cuanto consume MB un tabla en un TABLESPACE
+SELECT SUM(BYTES/1024/1024) MB FROM DBA_EXTENTS WHERE SEGMENT_NAME = 'WWV_FLOW_PAGE_PLUGS' order by extent_ID
