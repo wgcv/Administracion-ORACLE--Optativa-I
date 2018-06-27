@@ -1,6 +1,10 @@
 # Usuario
+
 ## Crear usuario
 CREATE USER PRUEBA_TOPICOS IDENTIFIED BY TOPICOS12;
+
+## Cambiar contraseña
+ALTER USER SYS IDENTIFIED BY Admincidt17;
 
 El TABLESPACE temporal se asigna el temporal por defecto DFAULT_TEMP_TABLESPACE
 ## Dar permisos para conectarse y crear objetos (Como SYSDBA)}
