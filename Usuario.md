@@ -43,4 +43,9 @@ select * from DBA_TS_QUOTAS;
 ### Crear una tabla de prueba
 CREATE TABLE ALUMNOS (codigo Number(3), nombres varchar(50));
 INSERT INTO ALUMNOS (codigo, nombres) VALUES (0, 'Ana');
+## Consultar permisos orogados solo para objetos
+select * from DBA_TAB_PRIVS where GRANTEE ='HR'
+
+## Consultar prvilegios asigandos
+select * from dba_sys_privs where grantee ='HR'
 
