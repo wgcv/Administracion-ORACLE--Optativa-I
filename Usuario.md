@@ -49,3 +49,23 @@ select * from DBA_TAB_PRIVS where GRANTEE ='HR'
 ## Consultar prvilegios asigandos
 select * from dba_sys_privs where grantee ='HR'
 
+
+## Ver permisos
+### Permisos de objetos
+select * from dba_tab_privs where grantee='DBA'
+### Permisos de sistema
+select * from dba_sys_privs where grantee='DBA'
+
+## Roles
+### Crear rol
+CREATE ROLE CLASE
+### Ver roles
+select * from DBA_ROLES
+#### Agrgar permisos a rol
+GRANT CREATE SESSION TO CLASES;
+GRANT CREATE TABLE TO CLASE;
+GRANT CREATE VIEW TO CLASE;
+GRANT SELECT ON HR.EMPLOYEES TO CLASE;
+### Asignar el rol a un usuario
+GRANT CLASE TO PRUEBA_TOPICOS1
+
