@@ -68,4 +68,15 @@ GRANT CREATE VIEW TO CLASE;
 GRANT SELECT ON HR.EMPLOYEES TO CLASE;
 ### Asignar el rol a un usuario
 GRANT CLASE TO PRUEBA_TOPICOS1
+## Crear un sinonimo
+CREATE SYNONYM PRUEBA_TOPICOS1.EPLOYEES FOR HR.EMPLOYEES;
 
+
+## Profile
+### Crear un nuevo perfil
+create profile PROFILE_TOPICOS limit sessions_per_user 3  failed_login_attempts 3 password_life_time 1 password_reuse_max 2 password_lock_time 1 password_grace_time 1;
+Tambien se puede usar el modo visual de PLSQL
+### Ver los profiles creados
+select * from DBA_PROFILE
+### Asignar un profie
+ALTER USER PRUEBA_TOPICOS1 PROFILE POFILE_TOPICOS;
