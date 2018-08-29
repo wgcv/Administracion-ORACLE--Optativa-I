@@ -14,6 +14,9 @@ show parameter spfile
 Create pfile from spfile;
 "Genera un pfile desde un spfile"
 
+Crear un PFILE desde un INIT.ORA
+CREATE SPFILE FROM PFILE='INITorcl.ORA';
+
 ### Como cambiar parametros de la base de datos
 ALTER SYSTEM SET parameter_name = parameter_value [COMMENT = 'text'] [SCOPE = MEMORY  |  SPFILE  |  BOTH]
 
